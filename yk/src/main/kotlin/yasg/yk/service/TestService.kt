@@ -11,5 +11,5 @@ class TestService {
     @Value("\${b}")
     lateinit var b: String
 
-    fun calQuadraticEquation(x: Int) = a.toInt() * x * x + b.toInt() * x
+    fun calQuadraticEquation(x: Int) = a.toInt() * x * x + b.toInt() * x + 1
 }
