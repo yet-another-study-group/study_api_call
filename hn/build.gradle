@@ -24,6 +24,11 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation platform("org.springframework.cloud:spring-cloud-dependencies:2021.0.5")
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+    implementation 'org.apache.commons:commons-math3:3.6.1'
 }
 
 tasks.named('test') {
