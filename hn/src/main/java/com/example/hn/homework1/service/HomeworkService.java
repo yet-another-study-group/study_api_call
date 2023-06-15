@@ -32,33 +32,26 @@ public class HomeworkService {
                 {x1 * x1, x1},
                 {x2 * x2, x2}
         };
-        log.debug(printMatrix(matrixData));
+        log.debug("입력 행렬:{}", printMatrix(matrixData));
 
         double[] resultData = {answer1, answer2};
-
 
         RealMatrix matrix = new Array2DRowRealMatrix(matrixData);
         RealMatrix resultMatrix = new Array2DRowRealMatrix(resultData);
 
-
         RealMatrix inverseMatrix = MatrixUtils.inverse(matrix);
-        log.debug(printMatrix(inverseMatrix.getData()));
-
+        log.debug("역행렬:{}", printMatrix(inverseMatrix.getData()));
 
         RealMatrix solutionMatrix = inverseMatrix.multiply(resultMatrix);
-
-
         double[] solution = solutionMatrix.getColumn(0);
         int a = (int) Math.round(solution[0]);
         int b = (int) Math.round(solution[1]);
-        log.debug("a:" + a + ", b:" + b);
-
+        log.debug("a:{}, b:{}", a, b);
 
         return ABResponse.of(a, b);
-
     }
 
-    public String printMatrix(double[][] matrix) {
+    private String printMatrix(double[][] matrix) {
         StringBuilder str = new StringBuilder();
         IntStream.range(0, matrix.length)
                 .forEach(e -> str.append(Arrays.toString(matrix[e]) + "\n"));

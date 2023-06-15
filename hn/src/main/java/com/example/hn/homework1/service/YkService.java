@@ -13,8 +13,8 @@ public class YkService {
     private final YkApi ykApi;
 
     public int getAnswer(int x) {
-        int answer=ykApi.getAnswer(x).getAnswer();
-        log.debug("answer="+answer);
+        int answer = ykApi.getAnswer(x).getAnswer();
+        log.debug("answer:{}", answer);
         return answer;
     }
 }

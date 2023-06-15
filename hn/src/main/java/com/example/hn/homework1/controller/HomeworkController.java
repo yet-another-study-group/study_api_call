@@ -14,9 +14,9 @@ public class HomeworkController {
     private final HomeworkService homeworkService;
 
     @GetMapping("/hn/homework1")
-    public ApiResponse getAnswer(){
+    public ApiResponse getAnswer() {
 
-        ABResponse response=homeworkService.getAnswer();
+        ABResponse response = homeworkService.getAnswer();
         return ApiResponse.ok(response);
     }
 }
