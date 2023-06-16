@@ -1,13 +1,15 @@
-package com.study.msa;
+package com.study.hyy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-public class MsaApplication {
+@EnableFeignClients
+public class HyyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsaApplication.class, args);
+		SpringApplication.run(HyyApplication.class, args);
 	}
 
 }
