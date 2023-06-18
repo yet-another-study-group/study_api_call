@@ -13,8 +13,8 @@ public class CjyController {
     private final CjyService cjyService;
 
     @GetMapping("/getNum")
-    public String getNum() {
-        String result = cjyService.algorithm();
-        return result;
+    public ResponseEntity<ResponseDto> getNum() {
+        ResponseDto result = cjyService.algorithm();
+        return ResponseEntity.ok(result);
     }
 }
