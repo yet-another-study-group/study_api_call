@@ -1,0 +1,9 @@
+server:
+  port: 8082
+
+feign:
+  ykapi-url: http://localhost:8081
+
+#logging:
+#  level:
+#    root: debug

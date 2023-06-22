@@ -29,6 +29,10 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 
     implementation 'org.apache.commons:commons-math3:3.6.1'
+
+    testImplementation "org.springframework.cloud:spring-cloud-contract-wiremock:3.1.5"
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.5'
+
 }
 
 tasks.named('test') {
