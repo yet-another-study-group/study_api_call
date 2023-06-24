@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service
 
 @Service
 class TestService {
-
     @Value("\${a}")
     lateinit var a: String
 
