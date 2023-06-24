@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name = "YkFeignClient", url="http://localhost:8081")
 public interface YkFeignClient {
-
     @GetMapping(value = "/api/cal/{x}")
     int getValue(@PathVariable("x") int x);
-
 }
